@@ -160,7 +160,7 @@
         .attr("y1", (d) => d.source.y)
         .attr("x2", (d) => d.target.x)
         .attr("y2", (d) => d.target.y)
-        .attr("stroke", "#66bb6a") // Verde claro
+        .attr("stroke", "#212121") // Verde claro
         .attr("stroke-width", 2.5) // Más grueso
         .attr("stroke-dasharray", "3,3"); // Líneas más juntas
 
@@ -177,9 +177,8 @@
     nodes.append("circle")
         .attr("r", 25)
         .attr("fill", "url(#nodeGradient)") // Gradiente
-        .attr("stroke", "#004d40") // Verde oscuro
+        .attr("stroke", "212121") // Verde oscuro
         .attr("stroke-width", 3)
-        .style("filter", "drop-shadow(5px 5px 8px rgba(0,0,0,0.4))"); // Sombra más marcada
 
     // Define radial gradient for the nodes
     svg.append("defs")
@@ -187,8 +186,8 @@
         .attr("id", "nodeGradient")
         .selectAll("stop")
         .data([
-            { offset: "0%", color: "#8e44ad" }, // Color inicial (morado claro)
-            { offset: "100%", color: "#5e3370" } // Color final (morado oscuro)
+            { offset: "0%", color: "#ffcccc" }, // Color inicial (morado claro)
+            { offset: "100%", color: "#ffcccc" } // Color final (morado oscuro)
         ])
         .enter()
         .append("stop")
